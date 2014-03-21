@@ -164,7 +164,6 @@ var MatrixEngine = (function()
 	return {
 		init: function() 
 		{
-			alert("Click to add particles.");
 			setUpCanvas();
 			lastSpawn = 0
 			canvas.addEventListener('mousemove', mouseMoveHandler, false);
