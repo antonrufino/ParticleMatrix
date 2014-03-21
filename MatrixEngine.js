@@ -161,6 +161,11 @@ var MatrixEngine = (function()
 		window.webkitRequestAnimationFrame(run);
 	}
 	
+	function windowResizeHandler() {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+	}
+	
 	return {
 		init: function() 
 		{
@@ -169,6 +174,7 @@ var MatrixEngine = (function()
 			canvas.addEventListener('mousemove', mouseMoveHandler, false);
 			canvas.addEventListener('mousedown', mouseDownHandler, false);
 			canvas.addEventListener('mouseup', mouseUpHandler, false);
+			window.addEventListener('resize', windowResizeHandler, false);
 			run();
 		}
 	};
